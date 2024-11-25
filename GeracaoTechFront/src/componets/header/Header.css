@@ -1,0 +1,46 @@
+header {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+img{
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+#headerObjects {
+    margin-bottom: 1%;
+    margin-left: 5%;
+}
+
+input#search{
+    margin-left: 5%;
+    position: fixed;
+    margin-top: 2%;
+}
+
+#menu-itens {
+    margin-top: 2%;
+    margin-left: -3.25%;
+}
+
+ul {
+    display: flex; /*flex aqui - novo*/
+    justify-content: space-around; /* e distribuição de espaço aqui - novo */
+    width: 25%;
+}
+
+li {
+    list-style-type: none;
+    margin-right: 3%;
+}
+
+li a{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color:rgba(71, 71, 71, 1) !important;
+}
