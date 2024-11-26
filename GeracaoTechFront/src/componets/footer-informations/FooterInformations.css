@@ -1,0 +1,26 @@
+h1#title-footer{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+ul#list-informations-footer{
+    justify-content: center;
+    width: 0rem; 
+    margin-left: 0rem;
+    justify-content: flex-start;
+    display: contents; 
+    margin-top: 5rem;
+}
+
+
+ul#list-informations-footer li {
+    list-style-type: none;
+    background-color: none;
+    margin-top: 0.5rem;
+}
+
+ul#list-informations-footer li a {
+    font-size: 16px;
+    font-weight: 400;    
+    color: rgba(255, 255, 255, 1) !important;
+}
