@@ -2,7 +2,7 @@
 const ProductListingPage = () => {
     return ( 
     <>  
-    <h1>listagem</h1>
+    <h1>produtos</h1>
     </> 
     );
 }

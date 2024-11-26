@@ -1,14 +1,28 @@
 
 import React, { useState } from "react";
-import logo from '../../assets/logo-header.svg'
 import { NavLink } from "react-router-dom";
 import styled from 'styled-components';
 import { InputText } from 'primereact/inputtext';
+import { Button } from 'primereact/button';
+import { IconField } from "primereact/iconfield";
+import { InputIcon } from "primereact/inputicon";
+import { Menubar } from 'primereact/menubar';
+import { Badge } from 'primereact/badge';
+import  Logo  from '../logo/Logo';
 import './Header.css'
 
+const StyleMenu = styled(Menubar)`
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 1);
+  padding: 2rem;
+`;
+
 const StyledLink = styled(NavLink)`
-   color:rgba(71, 71, 71, 1) !important;
-  text-decoration: none;
+    color:rgba(71, 71, 71, 1) !important;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
   &:hover,
   &.active {
     color: rgba(201, 32, 113, 1) !important;
@@ -16,44 +30,114 @@ const StyledLink = styled(NavLink)`
     text-underline-offset: 10px;
     text-decoration-thickness: 2px; 
     font-weight: 700;
+    background-color: none !important;
   }
 `;
 
+const StyledLinkSingIn = styled(NavLink)`
+    color:rgba(71, 71, 71, 1) !important;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    
+  &:hover {
+    color: rgba(201, 32, 113, 1) !important;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px; 
+    font-weight: 700;
+  }
+`;
 
 const StyleInput = styled(InputText)`
-   color:rgba(71, 71, 71, 1) !important;
-   width:50rem;
-   height:3rem;   
-    margin-top: -10%;
-   /* padding: 0.75rem 20.75rem; */
+  color:rgba(102, 102, 102, 1) !important;
+  width:35rem;
+  height:3rem;
+  font-size: 16px;
+  font-weight: 400;
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 0.2rem #fec7e7;
-    border-color:  rgba(201, 32, 113, 1) !important;
+    box-shadow: 0 0 0 0.2rem #c9207258;
+    border-color:  rgba(201, 32, 113, 1);
   }
 `;
 
+const StyleButton = styled(Button)`
+  color:rgba(245, 245, 245, 1) !important;
+  background-color: rgba(201, 32, 113, 1);
+  width:7rem;
+  height:3rem;
+  font-size: 16px;
+  font-weight: 400;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem #c9207258;
+    border-color:  rgba(201, 32, 113, 1);
+  }
+`;
+
+const StyleBadge = styled(Badge)`
+  color:rgba(245, 245, 245, 1) !important;
+  background-color: rgba(238, 66, 102, 1);
+
+`;
 
 export default function Header() {  
     const [valueSearch, setValueSearch] = useState('');
 
-    return (
-        <header>
-            <div id="headerObjects">
-                <img src={logo} id="logo"/>
-                <StyleInput type="text" className="p-inputtext-lg" placeholder="Pesquisar produto..."
-                 value={valueSearch} onChange={(e) => setValueSearch(e.target.value)} id="search"/>
-                 <StyledLink  to="" exact activeClassName="active">Cadastre-se</StyledLink >
-                <div id="menu-itens">
-                    <ul>
-                        <li><StyledLink  to="/" exact activeClassName="active">Home</StyledLink ></li>
-                        <li><StyledLink  to="/produtos">Produtos</StyledLink ></li>
-                        <li><StyledLink  to="/produtos">Categorias</StyledLink ></li>
-                        <li><StyledLink  to="/produtos">Pedidos</StyledLink ></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-    )
+    const itemRenderer = (item) => (
+      <StyledLink to={item.rota} id="link" >
+       {item.label}
+      </StyledLink>
+  );
+
+  const items = [
+      {
+          label: 'Home',
+          rota:"/",
+          template: itemRenderer
+      },
+      {
+          label: 'Produtos',
+          rota:"/produtos",
+          template: itemRenderer
+      },
+      {
+          label: 'Categorias',
+          rota:"/produtos",
+          template: itemRenderer
+      },
+      {
+          label: 'Pedidos',
+          rota:"/produtos",
+          template: itemRenderer
+      }
+  ];
+
+  const start = (
+    <div  id="itens-left"> 
+      <Logo id="img" typeLogoIsHeader={true}/>
+      <IconField iconPosition="right" id="search">
+        <InputIcon className="pi pi-search" id="icon-search"> </InputIcon>
+        <StyleInput placeholder="Procurar..." value={valueSearch} onChange={(e) => setValueSearch(e.target.value)} />
+      </IconField>
+    </div>
+  );
+  const end = (
+      <div  id="itens-right">          
+        <StyledLinkSingIn  to="/" id="link-singIn">Cadastre-se</StyledLinkSingIn >
+        <StyleButton label="Entrar" id="buttonEnter"/>
+        <i className="pi pi-shopping-cart"  id="icon-shopping">
+          <StyleBadge value="2" id="icon-value"></StyleBadge>
+        </i>
+      </div>
+  );
+
+  return (
+    <header> 
+      <StyleMenu model={items} start={start} end={end} />
+    </header>
+  )
 }
-        
