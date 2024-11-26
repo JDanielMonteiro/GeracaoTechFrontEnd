@@ -29,7 +29,7 @@ const contato =[
 const Footer = () => {
     return (
         <footer>            
-            <div className="card">
+            {/* <div className="card"> */}
                 <div className="grid">
                     <div  className="col-4" id="card-footer-one">
                             <Logo id="img" typeLogoIsHeader={false}/>
@@ -54,7 +54,7 @@ const Footer = () => {
                 <p id="p-creditos">
                     @ 2022 Digital College
                 </p>
-            </div>       
+            {/* </div>        */}
         </footer>
     );
 };

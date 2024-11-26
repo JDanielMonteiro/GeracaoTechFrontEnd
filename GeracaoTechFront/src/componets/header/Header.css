@@ -1,8 +1,9 @@
 header {
-    position: fixed;
-    width: 100%;
+    position: flex;
+    width: 100%;    
     top: 0;    
     font-family: "Inter", sans-serif;
+    z-index:1000;
 }
 
 #img{
@@ -47,7 +48,7 @@ i#icon-shopping{
     position: relative;
 }
 
-ul {
+ul.p-menubar-root-list{
     margin-top: 5rem;
     display: flex; 
     justify-content: space-around;
@@ -55,7 +56,7 @@ ul {
     margin-left: -54rem;
 }
 
-li {
+ul.p-menubar-root-listli {
     list-style-type: none;
     background-color: none;
 }

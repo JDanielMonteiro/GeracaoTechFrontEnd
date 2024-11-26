@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PageLayout from '../pages/PageLayout';
+import Layout from '../pages/Layout';
 import HomePage from '../pages/homePage/HomePage';
 import ProductListingPage from '../pages/productListingPage/ProductListingPage';
 import NotFound from '../pages/NotFound/NotFound';
@@ -10,7 +10,7 @@ const AppRoutes = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<PageLayout />}>
+                <Route path="/" element={<Layout />}>
                     <Route index element={<HomePage />} />
                     <Route path="produtos" element={<ProductListingPage />} />
                     <Route path="produto/:id/:name" element={<ProductViewPage />} />
