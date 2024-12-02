@@ -6,7 +6,7 @@ import './Gallery.css';
 
 const StyleButton = styled(Button)`
   color:rgba(245, 245, 245, 1) !important;
-  background-color: rgba(201, 32, 113, 1);
+  background-color: #C92071;
   width:15rem;
   height:3rem;
   font-size: 16px;
@@ -14,7 +14,7 @@ const StyleButton = styled(Button)`
   &:hover,
   &:focus {
     box-shadow: 0 0 0 0.2rem #c9207258;
-    border-color:  rgba(201, 32, 113, 1);
+    border-color:  #C92071;
   }
 `;
 

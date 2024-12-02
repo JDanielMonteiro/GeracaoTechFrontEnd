@@ -25,7 +25,7 @@ const StyledLink = styled(NavLink)`
     text-align: left;
   &:hover,
   &.active {
-    color: rgba(201, 32, 113, 1) !important;
+    color: #C92071 !important;
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 2px; 
@@ -43,7 +43,7 @@ const StyledLinkSingIn = styled(NavLink)`
     text-align: left;
     
   &:hover {
-    color: rgba(201, 32, 113, 1) !important;
+    color: #C92071 !important;
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-thickness: 2px; 
@@ -60,13 +60,13 @@ const StyleInput = styled(InputText)`
   &:hover,
   &:focus {
     box-shadow: 0 0 0 0.2rem #c9207258;
-    border-color:  rgba(201, 32, 113, 1);
+    border-color:  #C92071;
   }
 `;
 
 const StyleButton = styled(Button)`
   color:rgba(245, 245, 245, 1) !important;
-  background-color: rgba(201, 32, 113, 1);
+  background-color: #C92071;
   width:7rem;
   height:3rem;
   font-size: 16px;
@@ -74,7 +74,7 @@ const StyleButton = styled(Button)`
   &:hover,
   &:focus {
     box-shadow: 0 0 0 0.2rem #c9207258;
-    border-color:  rgba(201, 32, 113, 1);
+    border-color:  #C92071;
   }
 `;
 
@@ -106,12 +106,12 @@ export default function Header() {
       },
       {
           label: 'Categorias',
-          rota:"/produtos",
+          rota:"/categorias",
           template: itemRenderer
       },
       {
           label: 'Pedidos',
-          rota:"/produtos",
+          rota:"/pedidos",
           template: itemRenderer
       }
   ];
@@ -127,7 +127,7 @@ export default function Header() {
   );
   const end = (
       <div  id="itens-right">          
-        <StyledLinkSingIn  to="/" id="link-singIn">Cadastre-se</StyledLinkSingIn >
+        <StyledLinkSingIn  to="/cadastro" id="link-singIn">Cadastre-se</StyledLinkSingIn >
         <StyleButton label="Entrar" id="buttonEnter"/>
         <i className="pi pi-shopping-cart"  id="icon-shopping">
           <StyleBadge value="2" id="icon-value"></StyleBadge>

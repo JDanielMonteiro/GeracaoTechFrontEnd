@@ -23,7 +23,7 @@ const categorias =[
     {'text':'Tênis', 'link':'/tenis'}
 ];
 const contato =[
-    {'text':'Av. Santos Dumont, 1510-1 andar - Aldeota, Fortaleza - Ce 60150-161', 'link':'/about', 'link':'/maps'},
+    {'text':'Av. Santos Dumont, 1510-1 andar - Aldeota, Fortaleza - Ce 60150-161', 'link':'/maps'},
     {'text':'(85)3051-3411', 'link':'/telefone'},
 ];
 const Footer = () => {

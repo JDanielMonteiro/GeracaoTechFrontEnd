@@ -1,3 +1,25 @@
-#section-body{
+#section-body, #section-body-left{
     background-color: rgba(245, 245, 245, 1);
+    padding: 1rem;
+    margin-top: -1rem;
+    font-family: "Inter", sans-serif;
+}
+
+#section-body h1,#section-body-left h1{
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    color:  #474747;
+    font-weight: 700;
+    margin-inline-start: 1rem;
+}
+
+#section-body h1{
+    text-align: center;
+}
+
+#link-section{
+    position: absolute;
+    right: 0;
+    margin-top: -2.5rem;
+    margin-right: 3rem;
 }

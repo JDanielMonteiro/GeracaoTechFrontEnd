@@ -18,11 +18,11 @@
 }
 
 #home-gallery li.p-galleria-indicator button:focus{
-    outline: 4px auto rgba(201, 32, 113, 1);
+    outline: 4px auto #C92071;
 }
 
 #home-gallery li.p-galleria-indicator.p-highlight button{
-    background-color:rgba(201, 32, 113, 1);
+    background-color:#C92071;
     border-color: none;
 }
 
@@ -35,18 +35,19 @@
 #home-gallery .p-galleria-thumbnail-item-content img:hover{
     outline-width:4px;
     outline-style: outset;
-    outline-color: rgba(201, 32, 113, 1);;
+    outline-color: #C92071;;
 }
 
 #home-gallery button.p-galleria-item-prev.p-galleria-item-nav.p-link{
-    background-color: transparent !important;outline: none;
+    background-color: transparent !important;
+    outline: none;
     border: none;
 }
 
 #gallery-text{
     position: absolute;
     margin-top: -35rem;
-    margin-left: 10rem;
+    margin-left: 5rem;
     z-index: 300;
     text-align: left;
 }
