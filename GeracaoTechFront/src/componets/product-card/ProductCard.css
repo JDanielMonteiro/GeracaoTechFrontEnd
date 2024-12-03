@@ -57,7 +57,7 @@ h2#discount{
     color: #1F1F1F !important;
 }
 
-img#img-product{
+.p-card-header img{
     width: 292px;
     height: 321px;
 }

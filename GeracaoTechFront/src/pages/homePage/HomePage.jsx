@@ -4,6 +4,7 @@ import Section from '../../componets/section/Section';
 import styled from 'styled-components';
 import { Button } from 'primereact/button';
 import ProductListing from '../../componets/product-listing/ProductListing ';
+import { productListHome, listaImagesHome } from '../../mock/Mock.js';
 import './HomePage.css';
 
 
@@ -20,85 +21,13 @@ const StyleButton = styled(Button)`
         border-color:  #C92071;
     }
 `;
-const listaImages = [
-    {"src": "../../../public/home-slide-1.jpeg"},
-    {"src": "../../../public/home-slide-2.jpeg"},
-    {"src": "../../../public/home-slide-3.jpeg"},
-    {"src": "../../../public/home-slide-4.jpeg"}
-]
 
-const productsList=[
-    {
-        "image":"../../../public/product-thumb-1.jpeg",
-        "type":"Tênis",
-        "name":"K-Swiss V8 - Masculino",
-        "price":"200",
-        "priceDiscount":"150,99",
-        "chip":"30% OFF"
-    },
-    {
-        "image":"../../../public/product-thumb-2.jpeg",
-        "type":"Tênis",
-        "name":"K-Swiss V8 - Feminino",
-        "price":"200",
-        "priceDiscount":null,
-        "chip":""
-    },
-    {
-        "image":"../../../public/product-thumb-3.jpeg",
-        "type":"Tênis",
-        "name":"Adidas Clássico",
-        "price":"350",
-        "priceDiscount":null,
-        "chip":""
-    },
-    {
-        "image":"../../../public/product-thumb-4.jpeg",
-        "type":"Tênis",
-        "name":"Nike Run",
-        "price":"250",
-        "priceDiscount":"200",
-        "chip":"20% OFF"
-    },
-    {
-        "image":"../../../public/product-thumb-5.jpeg",
-        "type":"Tênis",
-        "name":"Puma Old School",
-        "price":"270",
-        "priceDiscount":"200",
-        "chip":"30% OFF"
-    },
-    {
-        "image":"../../../public/product-thumb-1.jpeg",
-        "type":"Tênis",
-        "name":"Vans Masculino",
-        "price":"470",
-        "priceDiscount":null,
-        "chip":""
-    },
-    {
-        "image":"../../../public/product-thumb-2.jpeg",
-        "type":"Tênis",
-        "name":"Coturno Masculino",
-        "price":"300",
-        "priceDiscount":null,
-        "chip":""
-    },
-    {
-        "image":"../../../public/product-thumb-3.jpeg",
-        "type":"Tênis",
-        "name":"Adidas K20",
-        "price":"300",
-        "priceDiscount":null,
-        "chip":""
-    },
-];
 
 
 const HomePage = () => {
     return ( 
     <div id="home-body">          
-        <Gallery images={listaImages} width="1440px" height="681px" className="home-gallery" showThumbs={false} radius={null}/>      
+        <Gallery images={listaImagesHome} width="1440px" height="681px" className="home-gallery" showThumbs={false} radius={null}/>      
 
         <Section title="Coleções em destaque"  titleAlign = "center" link = {{"text": "Ver mais", "href": "/produtos"} }>
             <div className="grid" style={{padding:"1rem"}}>
@@ -115,7 +44,7 @@ const HomePage = () => {
         </Section>
          
         <Section title="Produtos em alta"  titleAlign = "left" link = {{"text": "Ver mais", "href": "/produtos"} }>
-            <ProductListing products={productsList}/>
+            <ProductListing products={productListHome}/>
         </Section> 
         
         <div className="grid" id="home-offer">

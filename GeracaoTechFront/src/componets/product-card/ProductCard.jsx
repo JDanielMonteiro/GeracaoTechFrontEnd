@@ -1,9 +1,16 @@
 import React from "react";
 import { Card } from 'primereact/card';
 import { Chip } from 'primereact/chip';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import "./ProductCard.css"
 
-const ProductCard = ({image, name,type, price, priceDiscount, chip}) => {   
+const ProductCard = ({image, name,type, price, priceDiscount, chip, id}) => {   
+
+    const navigate = useNavigate();
+
+    const handleNavigation = () => {
+      navigate(`/produto/${id}`);
+    };
 
     const header = () => {
         if(chip == null ||chip == ""){
@@ -41,7 +48,7 @@ const ProductCard = ({image, name,type, price, priceDiscount, chip}) => {
     }
 
     return (
-        <div className="card flex justify-content-center" id="product-card-body">
+        <div className="card flex justify-content-center" id="product-card-body" onClick={handleNavigation}>
             <Card id="card" title={name} subTitle={type} footer={footer} header={header} className="md:w-20rem">
             </Card>
         </div>
