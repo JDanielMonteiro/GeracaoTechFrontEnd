@@ -1,24 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { productsList} from '../../mock/Mock.js';
 
 const ProductViewPage = () => {
-    const productList = [
-        { id: 1, name: 'Banana' },
-        { id: 2, name: 'Maçã' },
-        { id: 3, name: 'Abacate' },
-        { id: 4, name: 'Espinafre' },
-        { id: 5, name: 'Cenoura' }
-    ];
+    
+    const { id } = useParams();
+
+    const produto = productsList.find(x => x.id == id)
+
     return (
         <div>
-            <h1>Produtos</h1>
-            <ul>
-                {productList.map(product => (
-                    <li key={product.id}>
-                        <Link to={`product/${product.id}/${product.name}`}>{product.name}</Link>
-                    </li>
-                ))}</ul>
+            <h1>Produto {produto.name}</h1>
+            <p>ID do Produto: {id}</p>
+            
         </div>
     );
 };
