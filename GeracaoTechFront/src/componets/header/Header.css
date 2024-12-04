@@ -1,0 +1,66 @@
+header {
+    position: flex;
+    width: 100%;    
+    top: 0;    
+    font-family: "Inter", sans-serif;
+    z-index:1000;
+}
+
+#img{
+    margin-top: 1rem;
+}
+
+#search{
+    margin-left: 18rem;
+    margin-top: -3rem;
+}
+
+div#itens-left{
+    margin-inline-start: 0rem;
+    margin-bottom: 3rem;
+}
+
+div#itens-right{
+    margin-left: 1rem;
+    margin-top: -4rem;
+}
+
+a#link-singIn{
+    margin-top: -5rem;
+}
+
+button#buttonEnter{
+    margin-left: 3rem;
+    top: 1rem;
+}
+
+i#icon-shopping{
+    margin-left: 5rem;
+    top: 0.5rem;
+    font-size: 1.5rem ;
+    position: relative;
+    color: #C92071!important;
+}
+
+#icon-value{
+    top: -1rem;
+    left: -0.5rem;
+    position: relative;
+}
+
+ul.p-menubar-root-list{
+    margin-top: 5rem;
+    display: flex; 
+    justify-content: space-around;
+    width: 30rem; 
+    margin-left: -54rem;
+}
+
+ul.p-menubar-root-listli {
+    list-style-type: none;
+    background-color: none;
+}
+
+.p-menuitem-content:hover{
+    background: none ;
+}

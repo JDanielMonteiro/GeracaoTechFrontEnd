@@ -1,0 +1,48 @@
+#home-body{
+    background-color:rgba(249, 248, 254, 1);
+    width: 100%;
+    margin-bottom: 1rem;
+    z-index:100;
+}
+
+#home-offer{
+    margin-top: 5rem;
+}
+
+#offer-image {
+    background-image: linear-gradient(rgba(68, 0, 255, 0.082),rgba(249, 248, 254, 1),rgba(249, 248, 254, 1));
+    margin-left: 6rem;
+    border-radius: 50%;
+    width: 466px;
+    height: 466px;
+}
+
+#offer-image img{
+    margin-left: -4rem;
+}
+#home-offer-text{
+    background-color:rgba(249, 248, 254, 1);
+    margin-bottom: 5rem;
+    margin-right: 3rem;
+    text-align: left;
+}
+
+#home-offer-text h3{
+    color: #C92071;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: -1rem;
+}
+
+#home-offer-text h1{
+    color: rgba(71, 71, 71, 1);
+    font-size: 48px;
+    font-weight: 700;
+}
+
+#home-offer-text p{
+    color: rgba(71, 71, 71, 1);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}

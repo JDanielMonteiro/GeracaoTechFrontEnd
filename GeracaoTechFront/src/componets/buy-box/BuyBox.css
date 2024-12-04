@@ -1,0 +1,68 @@
+#buybox{
+    text-align: left;
+    width: 450px;
+    font-family: "Inter", sans-serif;
+}
+
+#buybox h1{
+    font-size: 32px;
+    color: #1F1F1F;
+    font-weight: 700;
+}
+
+#buybox p#reference{    
+    font-size: 12px;
+    color: #666666;
+    font-weight: 500;
+}
+
+#buybox #with-discount h2#price{
+    color: #CCCCCC !important;
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: 16px;
+    margin-inline-start: 10rem;
+    margin-top: -3.5rem;
+} 
+
+#buybox #no-discount h2#price{
+    color: #474747 !important;
+    font-weight: 700;
+    font-size: 32px;
+} 
+
+#buybox h2#discount{
+    margin-top: 0.25rem;
+    margin-inline-start: 0rem;
+    font-size: 32px;
+    font-weight: 700;
+    color: #474747 !important;
+}
+
+#buybox button{
+    margin-top: 1rem;
+}
+
+.p-tag {
+    border-radius: 4px;
+    background-color: #F6AA1C;
+    font-size: 14px;
+    color: #FFFF;
+    width: 63px;
+    margin-left: -0.5rem;
+    margin-top: -0.75rem;
+}
+
+#rating {
+    font-size: 14px;
+    color: #8F8F8F;
+    font-weight: 500;
+    margin-top: -0.75rem;
+    margin-left: -0.5rem;
+}
+
+#productOptions{
+    font-size: 14px;
+    font-weight: 700;
+    color:#8F8F8F;
+}

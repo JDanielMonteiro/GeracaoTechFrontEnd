@@ -1,0 +1,70 @@
+#card.p-card, #card.p-component{
+    background-color: transparent !important;
+    box-shadow: none;
+    border: none;
+    font-family: "Inter", sans-serif;    
+    width: 292px !important;
+} 
+
+#card.p-card:hover, #card.p-component:hover{
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#card.p-card .p-card-body{
+    margin-inline-start: -1rem;
+}
+
+#card.p-card .p-card-title{
+    color: #474747;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#card.p-card .p-card-subtitle {
+    color: #8F8F8F;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: -4rem;
+    position: absolute;
+}
+
+#card.p-card .p-card-footer{
+    margin-top: -3rem;
+    margin-bottom: -2rem;
+    font-size: 24px;
+}
+
+#footer-with-discount h2#price{
+    color: #8F8F8F  !important;
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: 24px;
+} 
+
+#footer-no-discount h2#price{
+    color: #1F1F1F !important;
+    font-weight: 400;
+    font-size: 24px;
+} 
+
+h2#discount{
+    margin-top: -3.5rem;
+    margin-left: 4rem;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1F1F1F !important;
+}
+
+.p-card-header img{
+    width: 292px;
+    height: 321px;
+}
+
+#chip-product.p-chip{
+    background-color: #E7FF86;
+    margin-top: 1rem;
+    margin-inline-start: -17rem;
+    position: absolute;
+}

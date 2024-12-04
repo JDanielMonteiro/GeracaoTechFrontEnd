@@ -1,0 +1,24 @@
+footer{
+    background-color: rgba(31, 31, 31, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 2rem;
+    width: 101%;
+    bottom: 0%;
+    position:flex ;
+    font-family: "Inter", sans-serif;
+    z-index:1000;
+}
+
+#card-footer-one{
+    padding-inline: 4rem;
+}
+#card-footer-two{
+    margin-left: 5rem;
+}
+img#img-rede-social{
+    margin-right: 2rem;
+}
+
+#p-creditos{
+    text-align: center;
+}
