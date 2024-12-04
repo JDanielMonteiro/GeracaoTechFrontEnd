@@ -19,7 +19,7 @@ const StyleButton = styled(Button)`
 `;
 
 
-export default function Gallery({images, width, height, className, radius, showThumbs }) {
+export default function Gallery({images, width, height, className, radius, showThumbs,children }) {
 
     const [listaImages, setListaImages] = useState(null);
     useEffect(() => {
@@ -41,12 +41,7 @@ export default function Gallery({images, width, height, className, radius, showT
         <div > 
             <Galleria  numVisible={5} value={listaImages}  className={className} id="home-gallery" item={itemTemplate}  showItemNavigators  showIndicators={!showThumbs}
               thumbnail={thumbnailTemplate} showThumbnails={showThumbs} circular />
-            <div id="gallery-text">
-                <h3>Melhores ofertas personalizadas</h3>
-                <h1>Queima de<br/>estoque Nike 🔥</h1>
-                <p>Consequat culpa exercitation mollit nisi excepteur do<br/>do tempor laboris eiusmod irure consectetur.</p>
-                <StyleButton label="Ver Ofertas" id="button-gallery"/>
-            </div>
+              {children}
         </div>
     )
 }

@@ -71,3 +71,11 @@
     font-weight: 400;
     margin-bottom: 2rem;
 }
+.p-galleria .p-galleria-thumbnail-container {
+    background-color: transparent;
+}
+
+.p-galleria .p-galleria-thumbnail-container button{
+    
+    background-color: transparent;
+}

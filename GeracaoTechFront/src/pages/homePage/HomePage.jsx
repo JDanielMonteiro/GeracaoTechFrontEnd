@@ -27,7 +27,14 @@ const StyleButton = styled(Button)`
 const HomePage = () => {
     return ( 
     <div id="home-body">          
-        <Gallery images={listaImagesHome} width="1440px" height="681px" className="home-gallery" showThumbs={false} radius={null}/>      
+        <Gallery images={listaImagesHome} width="1440px" height="681px" className="home-gallery" showThumbs={false} radius={null}>
+            <div id="gallery-text">
+                <h3>Melhores ofertas personalizadas</h3>
+                <h1>Queima de<br/>estoque Nike 🔥</h1>
+                <p>Consequat culpa exercitation mollit nisi excepteur do<br/>do tempor laboris eiusmod irure consectetur.</p>
+                <StyleButton label="Ver Ofertas" id="button-gallery"/>
+            </div>    
+        </Gallery>      
 
         <Section title="Coleções em destaque"  titleAlign = "center" link = {{"text": "Ver mais", "href": "/produtos"} }>
             <div className="grid" style={{padding:"1rem"}}>
